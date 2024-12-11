@@ -3,6 +3,19 @@ function sub(a, b){return a-b; }
 function multi(a, b){ return a*b; }
 function mod(a, b){ return (a%b==0); }
 
+function preencheTabela(table, lista){
+    
+    lista.forEach(element => {
+				var tr = querySelector('.linha');
+				var td = querySelector('.coluna');
+				
+        td.innerText = element;
+        tr.appendChild(td);// problema está aqui
+        table.appendChild(tr);
+        d.appendChild(table);
+    });
+    return d;
+}
 function criaTabela(lista, d){
     var table = document.createElement('table'); //Function create table? and others....
     table.className = 'tabela';
@@ -12,25 +25,6 @@ function criaTabela(lista, d){
         tr.className = 'linha';
         var td = document.createElement('td');
         td.className = 'coluna';
-
-        td.innerText = element;
-        tr.appendChild(td);// problema está aqui
-        table.appendChild(tr);
-        d.appendChild(table);
-    });
-    return d;
-}
-function outraTabela(lista, d){
-    var table = document.createElement('table'); //Function create table? and others....
-    table.className = 'tabela';
-    
-    lista.forEach(element => {
-        var tr = document.createElement('tr');
-        tr.className = 'linha';
-        var td = document.createElement('td');
-        td.className = 'coluna';
-
-        td.innerText = element;
         tr.appendChild(td);// problema está aqui
         table.appendChild(tr);
         d.appendChild(table);
@@ -53,7 +47,7 @@ btn.addEventListener('click', function(){
     y = Number(b);
     const functionList = [soma(x,y), sub(x,y), multi(x,y), mod(x,y)];
 
-    var novaTabela = criaTabela(functionList, div);
+    var novaTabela = novaTabela(functionList, div);
     //estilizacao(novaTabela);
     var teste = outraTabela(functionList, div);
     
