@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="teste.css" rel="stylesheet">
+    <title>Exercício 03</title>
+    <style>
+        .tabela{
+            border: 2px solid black;
+            padding: 3px;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+            height: 400px;
+            width: 380px;
+        }
+        .linha{
+            
+            text-align: center;
+        }
+        .coluna{
+            border: 2px solid black;
+            padding: 3px;
+            font-family: sans-serif;
+            font-style: italic;
+        }
+        body{
+            align-content: center;
+        }
+    </style>
+</head>
+<body id="corpo">
+        <input type="text" id="um" placeholder="Num Um" style="padding: 7px; font-size: large; margin: 5px;"/>
+        <input type="text" id="dois" placeholder="Num Dois" style="padding: 7px; font-size: large; margin: 5px;"/>
+        <button id="btn" style="padding: 7px; font-size: large; margin: 5px;">Gerar tabela</button>
+        <br/>
+        <div id="container">
+        </div>
+    
+    <script defer src="gerador.js"></script>
+</body>
+</html>
